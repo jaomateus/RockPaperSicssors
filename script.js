@@ -4,7 +4,10 @@ let playerSelection;
 let computerScore = 0;
 let playerScore = 0;
 
-
+//function to capitalize a string
+function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
 
 // generate a random value from myArray
 function getComputerChoice () {
@@ -30,7 +33,7 @@ function playRound(playerSelection, computerSelection) {
         (computerSelection == "paper" && playerSelection == "rock")
         ) {
 
-        computerScore = computerScore++
+        computerScore = ++computerScore
 
         if (computerScore == 1) {
             return (`Oooops... you lost! 
@@ -54,8 +57,8 @@ function playRound(playerSelection, computerSelection) {
             );
         }
     } else {
-        
-        playerScore = playerScore++
+
+        playerScore = ++playerScore
 
         if (playerScore == 1) {
             return (`You won. Very good!
@@ -81,7 +84,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
     
-/*
+
 //Create a play function
 function game (){
     for (let i = 0; i < 5; i++) {
@@ -90,7 +93,7 @@ function game (){
 
      }  
 }  
-*/   
+  
         
   
 
