@@ -19,10 +19,6 @@ function getComputerChoice () {
 function playRound(playerSelection, computerSelection) {
     computerSelection = getComputerChoice().toLowerCase();
     playerSelection = playerSelection.toLowerCase();
-    
-    // just for testing
-    console.log (computerSelection)
-    console.log (playerSelection)
 
     // test the options 
     if (computerSelection == playerSelection) {
@@ -52,7 +48,7 @@ function playRound(playerSelection, computerSelection) {
                    ${capitalize(computerSelection)} beats ${capitalize(playerSelection)}`
             );
         } else {
-            return (`You lost!!
+            return (`You definitely lost!!
                    ${capitalize(computerSelection)} beats ${capitalize(playerSelection)}`
             );
         }
@@ -87,14 +83,13 @@ function playRound(playerSelection, computerSelection) {
 
 //Create a play function
 function game (){
+    let computerScore = 0;
+    let playerScore = 0;  
+
     for (let i = 0; i < 5; i++) {
-        playerSelection = prompt("Rock, Paper or scissors?").toLowerCase();
-        playRound(playerSelection)
+        playerSelection = prompt("Paper, rock or scissors?");
+        console.log(playRound(playerSelection, computerSelection));
+    } 
+}
 
-     }  
-}  
-  
-        
-  
-
- 
+game()
