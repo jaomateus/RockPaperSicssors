@@ -80,16 +80,3 @@ function playRound(playerSelection, computerSelection) {
     }
 }
     
-
-//Create a play function
-function game (){
-    let computerScore = 0;
-    let playerScore = 0;  
-
-    for (let i = 0; i < 5; i++) {
-        playerSelection = prompt("Paper, rock or scissors?");
-        console.log(playRound(playerSelection, computerSelection));
-    } 
-}
-
-game()
